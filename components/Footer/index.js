@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+    const s = "s";
     const date = new Date();
     return(
         <footer className="py-32 border-t-1 border-gray-300 border-dashed">
