@@ -1,0 +1,33 @@
+.banner{
+    position: relative;
+    &::before, &::after{
+        content:"";
+        @apply block absolute right-0 top-0 bottom-0 left-0
+    }
+    &::before{
+        background-image:url('/static/images/banner-gradient-shape-1.svg');
+        background-repeat: no-repeat;
+        background-position: top right;
+
+        @screen lg{
+            background-image:url('/static/images/banner-gradient-shape-1--desktop.svg');
+            background-position:top right;
+            background-size: 700px;
+        }
+    }
+    &::after{
+        background-image:url('/static/images/banner-gradient-shape-2.svg');
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        background-size: contain;
+        max-width: 99%;
+        @screen lg{
+            background-image:url('/static/images/banner-gradient-shape-2--desktop.svg');
+            background-position:top left;
+           
+            background-size: contain;
+            max-width:100%;
+        }
+     
+    }
+}

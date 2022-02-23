@@ -1,0 +1,133 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  @apply font-dmsans;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+img{
+  @apply max-w-full;
+}
+
+.link-gradient-underline{
+  @apply inline-block relative cursor-pointer pb-4;
+  &::before{
+    @apply absolute bottom-0 left-0 right-0 z-10 block;
+    width:0;
+    content:'';
+    height:1px;
+    background: #00a8ff; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #00a8ff 8%, #0ee000 50%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #00a8ff 8%,#0ee000 50%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #00a8ff 8%,#0ee000 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a8ff', endColorstr='#0ee000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition: all 0.4s;
+  }
+  &::after{
+    content:"";
+    display: block;
+    height: 1px;
+    @apply absolute bottom-0 left-0 right-0;
+    background: #0ee000; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #0ee000 50%, #00a8ff 92%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #0ee000 50%,#00a8ff 92%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #0ee000 50%,#00a8ff 92%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0ee000', endColorstr='#00a8ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
+
+  &:hover{
+    &::before{
+      width:100%;
+    }
+  }
+}
+
+
+.explore-courses-slider{
+  overflow: hidden;
+  padding-right:40px;
+  .slick-list{
+    overflow: unset;
+  }
+
+  // @screen sm{
+  //   padding-right: 0;
+  // }
+  // @screen md{
+  //   padding-right:56px;
+  // }
+  @screen lg{
+    padding-right:0;
+  }
+}
+
+.reviews-slider{
+    .item,.slick-slide{
+      transition: all 0.4s;
+    }
+    @media screen and (max-width:560px){
+    .slick-track{
+      display: flex;
+      align-items: center;
+    }
+    .slick-list{
+      padding-top:32px !important;
+      padding-bottom:32px !important;
+
+      .slick-active{
+        margin-top:-24px;
+        margin-bottom:-24px;
+        .item{
+          padding-top:32px;
+          padding-bottom:32px;
+        }
+      }
+    }
+  }
+
+  @screen exlg{
+    .slick-list{
+      padding-left:0 !important;
+    }
+  }
+}
+
+.courses-slider{
+  @screen md{
+    overflow:hidden;
+    padding-right:100px;
+    .slick-list{
+      overflow:visible;
+ 
+    }
+  }
+
+  @screen lg{
+    padding-right:0;
+    .slick-list{
+      overflow: hidden;
+     
+    }
+  }
+
+  @screen exlg{
+  
+    .slick-list{
+      padding-left:0 !important;
+    }
+  }
+}

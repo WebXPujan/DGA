@@ -1,0 +1,66 @@
+.exploreCourses{
+
+}
+.skyrocketSection{
+    .header{
+        @apply relative;
+        &::before{
+            content:"";
+            @apply block absolute -top-56 -left-20;
+            width:78px;
+            height:84px;
+            background: url('/static/images/dots-pattern.svg') no-repeat center center/ contain;
+            transform:rotate(-28deg);
+
+            @screen lg{
+                width:120px;
+                height:130px;
+                @apply -left-112 -top-80;
+            }
+        }
+    }
+    
+}
+
+.shortCourses{
+    position: relative;
+    &::before{
+        content:"";
+        @apply block absolute inset-0 w-full;
+        background:url('/static/images/semi-round--mobile.svg') no-repeat top left/ contain;
+        
+    }
+
+    @screen sm{
+        background-position:center left;
+    }
+
+    @screen md{
+        &::before{
+            background-image:url('/static/images/semi-round--desktop.svg');
+            background-position:center left;
+      
+        }
+
+        .courses-slider{
+            padding-right:40px;
+        }
+    }
+
+
+    @screen exlg{
+        &::before{
+            max-width:100%;
+            background-size:contain;
+        }
+    }
+
+    .slider-wrapper{
+
+    }
+}        
+
+
+.comfortZoneSection{
+    
+}

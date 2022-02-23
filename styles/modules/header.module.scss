@@ -1,0 +1,46 @@
+.header{
+    .header__category-toggler{
+     
+    }
+    
+}
+.header__logo{
+    max-width: 50px;
+    @apply w-full;
+    a{
+        @apply block;
+    }
+}
+.header__navToggler{
+    .togglerButton{
+        height:30px;
+        width:30px;
+        @apply px-6 flex flex-col items-center justify-center;
+        background-color: green;
+    }
+
+    .bar{
+        @apply bg-white p-1 block rounded-sm mb-4 w-full;
+        &:last-child{
+            @apply mb-0;
+        }
+    }
+
+    
+}
+
+.header__navigation{
+    @apply flex items-center;
+    ul{
+        @apply flex items-center;
+        li{
+          @apply px-16;  
+        }
+        a{
+            @apply text-white text-sm font-worksans;
+        }
+    }
+    button{
+        @apply ml-8;
+    }
+}

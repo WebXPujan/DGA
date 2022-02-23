@@ -1,0 +1,16 @@
+.gradient{
+    
+    background: #00a8ff; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #00a8ff 8%, #0ee000 31%, #0ee000 67%, #00a8ff 93%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #00a8ff 8%,#0ee000 31%,#0ee000 67%,#00a8ff 93%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #00a8ff 8%,#0ee000 31%,#0ee000 67%,#00a8ff 93%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a8ff', endColorstr='#00a8ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    transition:all 0.4s;
+    &:hover{
+       opacity: 0.9;
+    }
+}
+
+.btn__lg{
+    min-width:240px;
+}
