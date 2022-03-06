@@ -2,6 +2,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+	"./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
 	extend: {
@@ -47,36 +48,36 @@ module.exports = {
 
 		},
 		fontFamily:{
-		dmsans: [
-					'DM Sans',
-					'-apple-system',
-					'BlinkMacSystemFont',
-					'"Segoe UI"',
-					'Roboto',
-					'"Helvetica Neue"',
-					'Arial',
-					'"Noto Sans"',
-					'sans-serif',
-					'"Apple Color Emoji"',
-					'"Segoe UI Emoji"',
-					'"Segoe UI Symbol"',
-					'"Noto Color Emoji"',
-				],
-		worksans: [
-					'Work Sans',
-					'-apple-system',
-					'BlinkMacSystemFont',
-					'"Segoe UI"',
-					'Roboto',
-					'"Helvetica Neue"',
-					'Arial',
-					'"Noto Sans"',
-					'sans-serif',
-					'"Apple Color Emoji"',
-					'"Segoe UI Emoji"',
-					'"Segoe UI Symbol"',
-					'"Noto Color Emoji"',
-				],
+			dmsans: [
+						'DM Sans',
+						'-apple-system',
+						'BlinkMacSystemFont',
+						'"Segoe UI"',
+						'Roboto',
+						'"Helvetica Neue"',
+						'Arial',
+						'"Noto Sans"',
+						'sans-serif',
+						'"Apple Color Emoji"',
+						'"Segoe UI Emoji"',
+						'"Segoe UI Symbol"',
+						'"Noto Color Emoji"',
+					],
+			worksans: [
+						'Work Sans',
+						'-apple-system',
+						'BlinkMacSystemFont',
+						'"Segoe UI"',
+						'Roboto',
+						'"Helvetica Neue"',
+						'Arial',
+						'"Noto Sans"',
+						'sans-serif',
+						'"Apple Color Emoji"',
+						'"Segoe UI Emoji"',
+						'"Segoe UI Symbol"',
+						'"Noto Color Emoji"',
+					],
 		},
 		fontSize: {
 			xxs: '10px',
@@ -93,11 +94,22 @@ module.exports = {
 			'7xl': '6rem', // 96px
 		},
 		fontWeight: {
-		normal: 400,
-		medium: 500,
-		semiBold: 600,
-		bold: 700,
-		extrabold: 800,
+			normal: 400,
+			medium: 500,
+			semiBold: 600,
+			bold: 700,
+			extrabold: 800,
+		},
+		height: {
+			'0': '0',
+			'50': '50px',
+			'150': '150px',
+			'250': '250px',
+			'100': '100px',
+			'30r': '30rem',
+			auto: 'auto',
+			full: '100%',
+			'screen': '100vh',
 		},
 		margin: (theme) => ({
 			auto: 'auto',
@@ -126,6 +138,12 @@ module.exports = {
 			'-112': '-7rem', // 112px
 			'-144': '-9rem', // 144px
 		}),
+		minHeight: {
+			'0': '0',
+			'140': '140px',
+			full: '100%',
+			'screen': '100vh',
+		},
 		padding: theme => theme('spacing'),
 		screens: {
 			sm:   '640px',
@@ -233,6 +251,12 @@ module.exports = {
 	borderWidth: ['responsive'],
 	margin: ['responsive'],
 	padding: ['responsive'],
-	textColor: ['group-hover', 'hover', 'focus']
-  }
+	textColor: ['group-hover', 'hover', 'focus'],
+	height: ['responsive'],
+	minHeight: ['responsive'],
+  },
+  corePlugins: {
+	height:true,
+	minHeight:true,
+},
 };
