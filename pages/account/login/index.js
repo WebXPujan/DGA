@@ -37,7 +37,7 @@ export default function Login(){
                             <Button type="submit" size="md" className="py-12 lg:px-32" variant="gradient">Submit</Button>
                         </div>
                     </form>
-                        <p className="text-gray-400 text-sm">Don't have an account? <Link href="/"><a className="text-blue-300">Sign up from here</a></Link></p>
+                        <p className="text-gray-400 text-sm">Don`&apos;`t have an account? <Link href="/"><a className="text-blue-300">Sign up from here</a></Link></p>
                     
                 </div>
             </div>
