@@ -30,7 +30,7 @@ export default function Register(){
 
                     <form method="" className="c-form mb-32" onSubmit={()=>alert('Hello')}>
                         <div className="flex flex-wrap -mx-16">
-                            <div className="col-lg-6 px-16">
+                            <div className="w-full lg:w-6/12 px-16">
                                 <div className="form-group mb-16">
                                     <Input 
                                         type="text" 
@@ -40,7 +40,7 @@ export default function Register(){
                                     />
                                 </div>
                             </div>
-                            <div className="col-lg-6 px-16">
+                            <div className="w-full lg:w-6/12 px-16">
                                 <div className="form-group mb-16">
                                     <Input 
                                         type="text" 
