@@ -11,7 +11,7 @@ export default function Login(){
             <div className="">
                 <Link href="/" className=""><a className="block text-center mb-32 exlg:mb-56"> <Image src={'/static/images/logo-footer.svg'} height="40" width="120" layout="intrinsic" alt="Logo"/> </a></Link>
                 <h2 className="text-center font-bold text-lg uppercase">Sign In</h2>
-                <div className="w-full exlg:w-6/12 mx-auto">
+                <div className="w-full exlg:w-7/12 xl:w-6/12 mx-auto">
                     <p className=" text-center text-gray-500 mb-32">Enter your login credentials to continue with your account.</p>
 
                     <form method="" className="c-form mb-32" onSubmit={()=>alert('Hello')}>
@@ -37,7 +37,7 @@ export default function Login(){
                             <Button type="submit" size="md" className="py-12 lg:px-32" variant="gradient">Submit</Button>
                         </div>
                     </form>
-                        <p className="text-gray-400 text-sm">Don't have an account? <Link href="/"><a className="text-blue-300">Sign up from here</a></Link></p>
+                        <p className="text-gray-400 text-sm">Don't have an account? <Link href="/account/register"><a className="text-blue-300">Sign up from here</a></Link></p>
                     
                 </div>
             </div>
